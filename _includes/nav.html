@@ -1,0 +1,10 @@
+<nav class="blog-nav">
+  <div class="container">
+    {% if config.minima and config.minima.nav %}
+      {% assign navs = config.minima.nav %}
+      {% for nav in navs %}
+        <a href="{{ nav.link | relativeUrl }}">{{ nav.text }}</a>
+      {% endfor %}
+    {% endif %}
+  </div>
+</nav>
